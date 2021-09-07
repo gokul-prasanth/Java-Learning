@@ -21,11 +21,37 @@ public class SearchInRotatedSortedArray {
 	// Complete the function implementation below
 	public int search(int[] nums, int target) {
 
-		return target;
+		int start = 0;
+		int end = nums.length - 1;
+
+		while(start <= end) {
+			int mid = start+(end-start)/2;
+
+			if(nums[mid] == target) {
+				return mid;
+			}
+
+			if(nums[start] <= nums[mid]) { //left half sorted
+				if(nums[start] <= target  && target < nums[mid]) { //search left half
+					end = mid - 1;
+				} else { //search right half
+					start = mid + 1;
+				}
+			} else { //Right half sorted
+				if(nums[mid] < target  && target <= nums[end]) { //search right half
+					start = mid + 1;
+				} else { //search left half
+					end = mid - 1;
+				}
+			}
+		}
+
+
+		return -1;
 	}
 
 	public static void main(String[] args) {
-		
+
 		Scanner scanner = new Scanner(System.in);
 		int n = scanner.nextInt();
 		int nums[] = new int[n];
@@ -39,5 +65,6 @@ public class SearchInRotatedSortedArray {
 			System.out.println(result);
 			q--;
 		}
+		scanner.close();
 	}
 }
