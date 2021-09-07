@@ -58,6 +58,7 @@ class MinimumPrefix {
 		long res = minimumPrefix(n, arr);
 
 		System.out.println(res);
+		sc.close();
 
 	}
 

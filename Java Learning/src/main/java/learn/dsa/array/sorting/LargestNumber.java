@@ -70,6 +70,8 @@ class LargestNumber {
 		String result = new LargestNumber().largestNumber(nums);
 
 		System.out.println(result);
+		
+		scanner.close();
 	}
 
 }

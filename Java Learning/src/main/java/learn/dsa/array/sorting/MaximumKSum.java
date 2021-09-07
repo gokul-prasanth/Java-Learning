@@ -68,6 +68,8 @@ public class MaximumKSum {
 		for (long j : res) {
 			System.out.println(j);
 		}
+		
+		sc.close();
 
 	}
 

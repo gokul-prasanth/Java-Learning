@@ -23,7 +23,7 @@ class CountSort {
 		String res = countSort(n, s);
 
 		System.out.println(res);
-
+        sc.close();
 	}
 
 	static String countSort(int n, String s) {

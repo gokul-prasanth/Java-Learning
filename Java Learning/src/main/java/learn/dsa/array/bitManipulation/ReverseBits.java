@@ -6,12 +6,13 @@ public class ReverseBits {
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
 		long t = sc.nextLong();
-
+		sc.close();
 		while(t-- > 0){
 			long n = sc.nextLong();
 			long ans = reverseBits(n);
 			System.out.println(ans);
 		}
+		sc.close();
 	}
 
 	static long reverseBitsOptimal(long n){

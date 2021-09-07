@@ -28,6 +28,7 @@ class MinDiff {
 
         System.out.println(res);
 
+        sc.close();
     }
 
     static int minDiff(int n, int a[]) {

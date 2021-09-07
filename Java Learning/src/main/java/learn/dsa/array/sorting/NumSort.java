@@ -50,6 +50,8 @@ class NumSort {
 		for (String num : sortedArray) {
 			System.out.print(num + " ");
 		}
+		
+		sc.close();
 
 	}
 

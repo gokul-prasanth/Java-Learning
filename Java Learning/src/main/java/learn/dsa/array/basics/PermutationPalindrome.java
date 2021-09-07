@@ -57,6 +57,7 @@ public class  PermutationPalindrome {
 				System.out.println("False");
 			}
 		}
+		sc.close();
 	}
 
 }

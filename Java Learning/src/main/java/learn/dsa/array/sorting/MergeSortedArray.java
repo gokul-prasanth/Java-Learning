@@ -100,5 +100,7 @@ public class MergeSortedArray {
 		for(int i = 0 ; i < nums1.length; i++) {
 			System.out.print(nums1[i] + " ");
 		}
+		
+		sc.close();
 	}
 }

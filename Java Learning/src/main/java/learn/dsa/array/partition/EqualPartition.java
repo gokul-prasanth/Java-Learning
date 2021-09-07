@@ -25,6 +25,7 @@ public class EqualPartition {
 
 		System.out.println(res);
 
+		sc.close();
 	}
 
 	static int equalPartition(int n, long arr[]) {

@@ -106,6 +106,8 @@ public class MarksSort {
 		for (int j : res) {
 			System.out.print(j + " ");
 		}
+		
+		sc.close();
 	}
 
 }

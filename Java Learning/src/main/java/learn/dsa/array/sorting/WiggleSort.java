@@ -47,6 +47,7 @@ class WiggleSort {
 		for (int i = 0; i < n; i++) {
 			System.out.print(ans.get(i)+" ");
 		}
+		sc.close();
 	}
 
 }
