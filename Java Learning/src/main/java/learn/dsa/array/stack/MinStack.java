@@ -1,5 +1,7 @@
 package learn.dsa.array.stack;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -61,19 +63,34 @@ Constraints
 
  */
 public class MinStack {
+
 	static Stack<Integer> stack = new Stack<Integer>();
 	static Stack<Integer> min = new Stack<Integer>();
 
 	static void push(Integer e) {
-		
+		stack.push(e);
 	}
-	
+
 	static void pop() {
-		
+		if(!stack.isEmpty()) {
+			stack.pop();
+		}
 	}
-	
+
 	static Integer findMin() {
-		return 1;
+		if(stack.isEmpty()) {
+			return -1;
+		} else {
+			Iterator<Integer> iterator = stack.iterator();
+			int min = Integer.MAX_VALUE;
+			while(iterator.hasNext()) {
+				Integer next = iterator.next();
+				if(next < min) {
+					min = next;	
+				}
+			}
+			return min;
+		}
 	}
 
 	public static void main (String[] args) {
