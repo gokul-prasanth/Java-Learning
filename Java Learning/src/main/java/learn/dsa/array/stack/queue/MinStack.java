@@ -1,4 +1,4 @@
-package learn.dsa.array.stack;
+package learn.dsa.array.stack.queue;
 
 import java.util.Arrays;
 import java.util.Iterator;

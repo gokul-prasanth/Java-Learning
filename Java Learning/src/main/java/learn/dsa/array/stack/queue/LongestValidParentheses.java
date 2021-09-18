@@ -1,6 +1,7 @@
-package learn.dsa.array.stack;
+package learn.dsa.array.stack.queue;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * @author Gokul A
@@ -30,16 +31,38 @@ Constraints
 0 <= length of string <= 10^5
 
  */
-class LongestValidParentheses{
-	public static void main(String args[]){
+class LongestValidParentheses {
+
+	public static void main(String args[]) {
+
 		Scanner sc = new Scanner(System.in);
 		String S = sc.nextLine();
 		int ans = longestValidParentheses(S);
 		System.out.println(ans);
+
 		sc.close();
+
 	}
 
-	static int longestValidParentheses(String s){
-		return 0;
+	static int longestValidParentheses(String s) {
+		int result = 0;
+		Stack<Integer> stack = new Stack<>();
+		stack.push(-1);
+		for(int i=0; i<s.length(); i++) {
+			if(s.charAt(i)=='(') {
+				stack.push(i);
+			}
+			if(s.charAt(i) == ')') {
+				if(!stack.isEmpty()) {
+					stack.pop();
+				}
+				if(!stack.isEmpty()) {
+					result = Math.max((i-stack.peek()), result);
+				} else {
+					stack.push(i);
+				}
+			}
+		}
+		return result;
 	}
 }
